@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://e0.pxfuel.com/wallpapers/351/67/desktop-wallpaper-payment-gateway-archives-the-2checkout-blog-articles-on-ecommerce-payments-cro-and-more.jpg'); 
+            background-size: cover; /* Menyesuaikan gambar agar mencakup seluruh latar belakang */
+            background-repeat: no-repeat; /* Menghindari pengulangan gambar pada latar belakang */
+            background-position: center; /* Menengahkan gambar latar belakang */
+            background-color: #181616;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 400px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        form {
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Checkout</h2>
+    </div>
+    <form id="paymentForm">
+        <label for="cardNumber">Nomor Kartu Kredit:</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+        <label for="expiryDate">Tanggal Checkout:</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvv">IDR:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+        <button type="button" onclick="processPayment()">Bayar</button>
+    </form>
+</div>
+
+<script>
+    function processPayment() {
+        // Validasi input di sini (gunakan algoritma Luhn untuk nomor kartu kredit)
+        // Selanjutnya, integrasikan dengan sistem pembayaran (gunakan API pembayaran)
+        alert('Pembayaran berhasil!');
+    }
+</script>
+
+</body>
+</html>
